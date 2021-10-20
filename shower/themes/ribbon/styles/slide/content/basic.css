@@ -1,0 +1,25 @@
+/* Basic */
+
+.slide h2 {
+    margin-top: 9px;
+    margin-bottom: 33px;
+    color: #f1f1f1;
+    font: bold 50px/1 'Zenith', sans-serif;
+}
+
+.slide * + h2 {
+    margin-top: 41px;
+}
+
+.slide p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.slide p.note {
+    color: var(--color-grey);
+}
+
+.slide figure {
+    margin: 0;
+}

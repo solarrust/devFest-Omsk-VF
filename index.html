@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>А какие варианты? Вариативные шрифты</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <link rel="icon" href="pictures/favicon/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>А какие варианты?</h1>
+        <p>Сказ про вариативные шрифты</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <div class="container">
+         <h2>А какие варианты?</h2>
+        </div>
+        <p>Сказ про вариативные шрифты</p>
+        <img src="pictures/devfest.png" alt="">
+        <style>
+            #cover {
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items:center;
+                background-color: #202124;
+            }
+            .container {
+                position: relative;
+                width: 100%;
+            }
+
+            #cover h2 {
+                color: #f1f1f1;
+                text-align: center;
+                font-family: 'Zenith', sans-serif;
+                font-size: 70px;
+                font-weight: 400;
+                animation: widthChange 8s linear infinite alternate-reverse;
+            }
+
+            #cover .container::before {
+                content: "А какие варианты?";
+                position: absolute;
+                left: 0;
+                top: -50%;
+                width: 100%;
+                text-align: center;
+                color: #333;
+                font-family: 'Zenith', sans-serif;
+                font-size: 70px;
+                font-weight: 400;
+                font-stretch: 20%;
+                z-index: -1;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: #f1f1f1;
+                font-size: 20px;
+                font-weight: 400;
+                font-style: italic;
+                animation: widthChange 8s linear infinite alternate;
+            }
+
+            #cover img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 25%;
+            }
+            @keyframes widthChange {
+                0% {
+                    font-variation-settings: "opsz" 20, "wdth" 400;
+                }
+                100% {
+                    font-variation-settings: "opsz" 100, "wdth" 700;
+                }
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="intro">
+        <img src="pictures/photo_sq_640.jpg" alt="" class="pic">
+        <h2>Алёна Батицкая</h2>
+        <a href="https://twitter.com/ABatickaya" class="social__link">@ABatickaya</a>
+        <ul class="who">
+            <li class="who__item">Фронтендер</li>
+            <li class="who__item">Фрилансер</li>
+            <li class="who__item">Перподаватель</li>
+            <li class="who__item">GDE for Web</li>
+            <li class="who__item">Редактор Доки</li>
+            <li class="who__item">Переводчик</li>
+        </ul>
+
+        <style>
+            #intro {
+                text-align: center;
+            }
+
+            #intro h2 {
+                font-weight: 400;
+                margin: 0.5em 0;
+            }
+            .pic {
+                width: 23%;
+                display: block;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+
+            .social__link  {
+                display: block;
+                width: min-content;
+                margin: 0 auto 15px;
+                text-align: center;
+            }
+
+            .who {
+                margin-top: 0.5em;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2%;
+            }
+
+            .who__item {
+                font-size: 0.8em;
+                padding: 0 10px;
+                margin-bottom: 0.5em;
+                border: 3px solid transparent;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+                border-radius: 5em;
+            }
+
+            .who li::before {
+                display: none;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <style>
+            .diff-container {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+            .diff {
+                width: 45%;
+            }
+            .arrow {
+                font-size: 3em;
+                margin: 15px;
+            }
+        </style>
+        <div class="diff-container">
+            <img src="pictures/block.jpeg" alt="" class="diff"> <span class="arrow">→</span> <img src="pictures/vf.webp" alt="" class="diff">
+        </div>
+    </section>
+
+    <section class="slide">
+        <p><a href="https://docs.microsoft.com/ru-ru/typography/opentype/spec/">OpenType 1.8</a> или OT1.8 появился в 2016</p>
+        <img src="pictures/static-font-files-vs-variable-font-files.png" alt="" style="width: 100%;">
+    </section>
+
+    <section class="slide">
+        <p class="example">Hello world!</p>
+        <div class="example-togglers">
+            <label for="" class="example-label">
+                <code>font-weight</code>
+                <input class="example-range" type="range" value="200" min="200" max="900" step="1" id="widthRange" oninput="widthVal(this.value)" onchange="widthVal(this.value)">
+            </label>
+            <label for="" class="example-label">
+                <code>font-stretch</code>
+                <input class="example-range" type="range" value="50" min="50" max="200" step="1" id="optRange" oninput="optVal(this.value)" onchange="optVal(this.value)">
+            </label>
+        </div>
+        <style>
+            @font-face {
+                font-family: "Inconsolata";
+                src: url("demos/wdth/fonts/Inconsolata.ttf");
+                font-stretch: 50% 200%;
+                font-weight: 200 900;
+            }
+            .example-togglers {
+                display: flex;
+                justify-content: space-between;
+                gap: 10%;
+            }
+
+            .example-label {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 1;
+            }
+
+            .example {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 4em;
+                font-family: "Inconsolata", monospace;
+                --weight: 200;
+                --stretch: 50%;
+                font-size: 2.8em;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: var(--weight);
+                font-stretch: var(--stretch);
+                /*font-variation-settings: "opsz" var(--stretch);*/
+            }
+
+            .example-range {
+                accent-color: #743ad5;
+                width: 100%;
+                margin-top: 10px;
+                height: 20px;
+            }
+        </style>
+
+        <script>
+            let ex = document.querySelector(".example");
+            let widthRange = document.querySelector("#widthRange");
+            let optRange = document.querySelector("#optRange");
+
+            function widthVal() {
+                ex.style.setProperty("--weight", widthRange.value)
+            }
+
+            function optVal() {
+                console.log(optRange.value)
+                ex.style.setProperty("--stretch", optRange.value + "%")
+            }
+        </script>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="font-size: 3em">151 * 701 = 105851</h2>
+    </section>
+
+    <section class="slide">
+        <p>Основные оси:</p>
+        <ul>
+            <li>насыщенность — <code class="next">wght</code></li>
+            <li>пропорция — <code class="next">wdth</code></li>
+            <li><i>курсивность</i> — <code class="next">ital</code></li>
+            <li>наклон — <code class="next">slnt</code></li>
+            <li>оптические размеры — <code class="next">opsz</code></li>
+        </ul>
+        <p class="next">Кастомных осей может быть сколько угодно. Они должны быть названы 4 буквами, но заглавными: <code>SOFT</code>, <code>WONK</code>, <code>GRAD</code>.</p>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/google-fonts.png" alt="" style="width: 100%; margin-top: 80px">
+    </section>
+
+    <section class="slide">
+        <h2>Было</h2>
+        <div class="columns two">
+            <div class="block">
+                <pre>
+                    <code>@font-face {</code>
+                    <code>  font-family: 'MyFont';</code>
+                    <code>  src: url('../fonts/link.woff2');</code>
+                    <code>  font-style: normal;</code>
+                    <code>  font-weight: 500;</code>
+                    <code>}</code>
+                    <code>...</code>
+                </pre>
+            </div>
+            <div class="block">
+                <pre>
+                    <code>@font-face {</code>
+                    <code>  font-family: 'MyFont';</code>
+                    <code>  src: url('../fonts/link-italic.woff2');</code>
+                    <code>  font-style: italic;</code>
+                    <code>  font-weight: 500;</code>
+                    <code>}</code>
+                    <code>...</code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <section class="slide">
+        <h2>Было</h2>
+        <div class="columns two">
+            <div class="block">
+                <pre>
+                    <code>@font-face {</code>
+                    <code>  font-family: 'MyFont';</code>
+                    <code>  src: url('../fonts/link-Thin.woff2');</code>
+                    <code>  font-style: normal;</code>
+                    <code>  font-weight: 100;</code>
+                    <code>}</code>
+                    <code>...</code>
+                </pre>
+            </div>
+            <div class="block">
+                <pre>
+                    <code>@font-face {</code>
+                    <code>  font-family: 'MyFont';</code>
+                    <code>  src: url('../fonts/link-italic-Extra-bold.woff2');</code>
+                    <code>  font-style: italic;</code>
+                    <code>  font-weight: 900;</code>
+                    <code>}</code>
+                    <code>...</code>
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Стало:</h2>
+        <div class="block">
+            <pre>
+                <code>@font-face {</code>
+                <code>  font-family: 'MyFontVF';</code>
+                <code>  src: url('../fonts/MyFontVF.woff2') format('woff2  supports variations'),</code>
+                <code>       url('../fonts/MyFontVF.woff2') format('woff2-variations');</code>
+                <code class="mark next">  font-weight: 200 900;</code>
+                <code class="mark next">  font-stretch: 50% 200%;</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Фолбэк на старые шрифты</h2>
+        <pre>
+            <code>body {</code>
+            <code>  font-family: 'MyFont', sans-serif;</code>
+            <code>}</code>
+            <code>@supports (font-variation-settings: normal) {</code>
+            <code>  body {</code>
+            <code>      font-family: 'MyFontVF', sans-serif;</code>
+            <code>  }</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <p>Основные оси:</p>
+        <ul>
+            <li>насыщенность — <code>wght</code> — <code class="next">font-weight</code></li>
+            <li>пропорция — <code>wdth</code> — <code class="mark next">font-stretch</code></li>
+            <li>курсивность — <code>ital</code> — <code class="next">font-style</code></li>
+            <li>наклон — <code>slnt</code> — <code class="next">font-style</code></li>
+            <li>оптические размеры — <code>opsz</code> — <code class="mark next">font-optical-sizing</code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-weight</code></h2>
+        <iframe src="demos/wght/index.html" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-stretch</code></h2>
+        <iframe src="demos/wdth/index.html" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-stretch</code></h2>
+        <ul class="columns two">
+            <li><code>ultra-condensed</code> — 50%</li>
+            <li><code>extra-condensed</code> — 62.5%</li>
+            <li><code>condensed</code> — 75%</li>
+            <li><code>semi-condensed</code> — 87.5%</li>
+            <li><code>normal</code> — 100%</li>
+            <li><code>semi-expanded</code> — 112.5%</li>
+            <li><code>expanded</code> — 125%</li>
+            <li><code>extra-expanded</code> — 150%</li>
+            <li><code>ultra-expanded</code> — 200%</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-style</code></h2>
+        <iframe src="demos/ital/index.html" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-style</code></h2>
+        <p class="next">НЕ РАБОТАЕТ 🥺</p>
+        <iframe src="demos/slnt-no/index.html" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-optical-sizing</code></h2>
+        <p class="next">НЕ РАБОТАЕТ 🥺</p>
+        <iframe src="demos/opsz-no/index.html" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-optical-sizing</code></h2>
+        <p>Возможные значения:</p>
+        <ul>
+            <li><code>auto</code></li>
+            <li><code>none</code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout shrink" style="font-size: 3em">
+            <code>font-variation-settings</code>
+        </h2>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-variation-settings</code></h2>
+        <iframe src="demos/slnt/index.html" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-variation-settings</code></h2>
+        <iframe src="demos/opsz/index.html" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-variation-settings</code></h2>
+        <iframe src="demos/custom/index.html" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2><code>font-variation-settings</code> 👎</h2>
+        <ul>
+            <li>При изменении одной оси остальные придётся переписывать</li>
+            <li>Не наследуется</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Это только начало!</h2>
+        <ul class="long-list">
+            <li><code>font-feature-settings</code></li>
+            <li><code>font-kerning</code></li>
+            <li><code>font-language-override</code></li>
+            <li><code>font-size-adjust</code></li>
+            <li><code>font-synthesis</code></li>
+            <li><code>font-variant</code></li>
+            <li><code>font-variant-alternates</code></li>
+            <li><code>font-variant-caps</code></li>
+            <li><code>font-variant-east-asian</code></li>
+            <li><code>font-variant-ligatures</code></li>
+            <li><code>font-variant-numeric</code></li>
+            <li><code>font-variant-position</code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 style="font-size: 4em">
+            Вариативные шрифты классные! 🦄
+        </h2>
+        <h2 class="next">НО…</h2>
+    </section>
+
+    <section class="slide">
+        <h2 style="font-size: 4em">
+            Нормальных шрифтов либо нет, либо они дорогие 🤑
+        </h2>
+    </section>
+
+    <section class="slide">
+        <q style="font-size: 2.5em">
+            Я в будущее смотрю с оптимизмом…
+        </q>
+        <p><cite>Noize MC</cite></p>
+    </section>
+
+    <section class="slide">
+        <h2>Ссылки</h2>
+        <ul style="font-size: 0.6em">
+            <li><a href="http://css.yoksel.ru/opentype-variable-fonts/">Вариативные шрифты</a></li>
+            <li><a href="https://type.today/ru/journal/opentype_variables">Знакомьтесь, вариативные шрифты (variable fonts)!</a></li>
+            <li><a href="https://vc.ru/design/263111-variativnye-shrifty-chto-eto-i-kak-ispolzovat">Вариативные шрифты: что это и как использовать?</a></li>
+            <li><a href="https://web.dev/variable-fonts/">Introduction to variable fonts on the web</a></li>
+            <li><a href="https://docs.microsoft.com/ru-ru/typography/opentype/spec/">OpenType® Specification</a></li>
+            <li><a href="https://pimpmytype.com/variable-font-fallback/">Implementing a variable font with fallback web fonts</a></li>
+            <li><a href="https://glyphsapp.com/learn/creating-a-variable-font">Creating a Variable Font</a></li>
+            <li><a href="https://clearleft.com/posts/how-to-use-variable-fonts-in-the-real-world">How to use variable fonts in the real world</a></li>
+            <li><a href="https://www.digitalocean.com/community/tutorials/css-variable-fonts">Variable Fonts on the Web Using CSS</a></li>
+            <li><a href="https://www.axis-praxis.org/specimens/__DEFAULT__">axis-praxis</a></li>
+            <li><a href="https://v-fonts.com">Variable Fonts v0.2</a></li>
+            <li><a href="https://fonts.google.com/variablefonts">Google Fonts: variable fonts</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Спасибо!</h2>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.js"></script>
+</body>
+</html>
