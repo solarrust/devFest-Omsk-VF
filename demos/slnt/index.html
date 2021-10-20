@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slnt</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url(fonts/Inter-VariableFont.ttf);
+    }
+    * {
+      font-family: 'Inter', monospace;
+      color: #f1f1f1;
+        background-color: #202124;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    span[class] {
+        font-size: 8em;
+    }
+    code {
+        font-size: 1em;
+    }
+    .one {
+      font-variation-settings: "slnt" -10;
+    }
+    .two {
+      font-variation-settings: "slnt" 0;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <p><code>font-variation-settings: "slnt" -10;</code></p>
+            <span class="one">Fox</span>
+        </div>
+        <div class="block">
+            <p><code>font-variation-settings: "slnt" 0;</code></p>
+            <span class="two">Fox</span>
+        </div>
+    </div>
+    <p class="note"><a href="https://fonts.google.com/specimen/Inter?vfaxis=slnt">Inter</a></p>
+</body>
+</html>
