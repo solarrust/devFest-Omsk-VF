@@ -1,52 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Кастомные оси</title>
-    <style>
-        @font-face {
-          font-family: 'Fraunces';
-          src: url(fonts/Fraunces-VariableFont.ttf);
-            font-weight: 100 900;
-        }
-        * {
-            font-family: "Fraunces", sans-serif;
-            color: #f1f1f1;
-            background-color: #202124;
-        }
-        .container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .block {
-            text-align: center;
-        }
-        span[class] {
-            font-size: 8em;
-        }
-        code {
-            font-size: 1em;
-        }
-        .two {
-            font-variation-settings: "wght" 550, "SOFT" 50, "opsz" 9;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="block">
-            <p><code>дефолт</code></p>
-            <span class="one">Fox</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Кастомные оси</title>
+        <style>
+            @font-face {
+                font-family: 'Fraunces';
+                src: url(fonts/Fraunces-VariableFont.ttf);
+                font-weight: 100 900;
+            }
+            * {
+                font-family: 'Fraunces', sans-serif;
+                color: #f1f1f1;
+                background-color: #202124;
+            }
+            .container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .block {
+                text-align: center;
+            }
+            span[class] {
+                font-size: 8em;
+            }
+            code {
+                font-size: 1em;
+            }
+            .two {
+                font-variation-settings: 'wght' 550, 'SOFT' 50, 'opsz' 9;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="block">
+                <p><code>дефолт</code></p>
+                <span class="one">Fox</span>
+            </div>
+            <div class="block">
+                <p>
+                    <code
+                        >font-variation-settings: "wght" 550, "SOFT" 50, "opsz"
+                        9;</code
+                    >
+                </p>
+                <span class="two">Fox</span>
+            </div>
         </div>
-        <div class="block">
-            <p><code>font-variation-settings: "wght" 550, "SOFT" 50, "opsz" 9;</code></p>
-            <span class="two">Fox</span>
-        </div>
-    </div>
-    <p class="note"><a href="https://fonts.google.com/specimen/Inconsolata#standard-styles">Inconsolata</a></p>
-</body>
+        <p class="note">
+            <a
+                href="https://fonts.google.com/specimen/Inconsolata#standard-styles"
+                >Inconsolata</a
+            >
+        </p>
+    </body>
 </html>

@@ -1,91 +1,92 @@
 @font-face {
-  font-family: 'Amstelvar';
-  src: url('fonts/Amstelvar-Roman.ttf') format('truetype  supports variations'),
-				url('fonts/Amstelvar-Roman.ttf') format('truetype-variations');
-  }
- 
+    font-family: 'Amstelvar';
+    src: url('fonts/Amstelvar-Roman.ttf')
+            format('truetype  supports variations'),
+        url('fonts/Amstelvar-Roman.ttf') format('truetype-variations');
+}
+
 * {
-  font-family: 'Amstelvar',  sans-serif;
+    font-family: 'Amstelvar', sans-serif;
 }
 
 body {
-	font-size: 2em;
+    font-size: 2em;
 }
 
 .zero {
-	font-size: 32px;
-	font-weight: 800;
-	font-style: italic;
-	line-height: 1.6;
-	font-stretch: 50%;
+    font-size: 32px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.6;
+    font-stretch: 50%;
 }
 
 .one {
-	font-variation-settings: 'wdth' 550;
-	animation: wdth 5s infinite alternate-reverse;
+    font-variation-settings: 'wdth' 550;
+    animation: wdth 5s infinite alternate-reverse;
 }
 
 .two {
-	font-variation-settings: 'wght' 36;
-	animation: wght 5s infinite alternate-reverse;
+    font-variation-settings: 'wght' 36;
+    animation: wght 5s infinite alternate-reverse;
 }
 
 .three {
-	font-variation-settings: 'opsz' 8;
-	animation: optz 5s infinite alternate-reverse;
+    font-variation-settings: 'opsz' 8;
+    animation: optz 5s infinite alternate-reverse;
 }
 
 .fore {
-	font-variation-settings: 'wdth' 50, 'wght' 100, 'opsz' 8;
-	animation: combo 5s infinite alternate-reverse;
+    font-variation-settings: 'wdth' 50, 'wght' 100, 'opsz' 8;
+    animation: combo 5s infinite alternate-reverse;
 }
 
 .five {
-	font-variation-settings: 'GRAD' 500 , 'XTRA' 324 , 'YTAS' 983, "YTLC" 570;
-	animation: custom 5s infinite alternate-reverse;
+    font-variation-settings: 'GRAD' 500, 'XTRA' 324, 'YTAS' 983, 'YTLC' 570;
+    animation: custom 5s infinite alternate-reverse;
 }
 
 @keyframes wdth {
-	0% {
-	 font-variation-settings: 'wdth' 50;
-	}
-	100% {
-	 font-variation-settings: 'wdth' 125;
-	}
+    0% {
+        font-variation-settings: 'wdth' 50;
+    }
+    100% {
+        font-variation-settings: 'wdth' 125;
+    }
 }
 
- @keyframes optz {
-	 0% {
-		font-variation-settings: 'opsz' 8;
-	 }
-	 100% {
-		font-variation-settings: 'opsz' 144;
-	 }
- }
+@keyframes optz {
+    0% {
+        font-variation-settings: 'opsz' 8;
+    }
+    100% {
+        font-variation-settings: 'opsz' 144;
+    }
+}
 
- @keyframes wght {
-	0% {
-	 font-variation-settings: 'wght' 100;
-	}
-	100% {
-	 font-variation-settings: 'wght' 900;
-	}
+@keyframes wght {
+    0% {
+        font-variation-settings: 'wght' 100;
+    }
+    100% {
+        font-variation-settings: 'wght' 900;
+    }
 }
 
 @keyframes combo {
-	0% {
-		font-variation-settings: 'wdth' 50, 'wght' 100, 'opsz' 8;
-	}
-	100% {
-		font-variation-settings: 'wdth' 125, 'wght' 900, 'opsz' 144;
-	}
+    0% {
+        font-variation-settings: 'wdth' 50, 'wght' 100, 'opsz' 8;
+    }
+    100% {
+        font-variation-settings: 'wdth' 125, 'wght' 900, 'opsz' 144;
+    }
 }
 
 @keyframes custom {
-	0% {
-		font-variation-settings: 'GRAD' 500 , 'XTRA' 324 , 'YTAS' 983, "YTLC" 570;
-	}
-	100% {
-		font-variation-settings: 'GRAD' -300 , 'XTRA' 640 , 'YTAS' 500, "YTLC" 420;
-	}
+    0% {
+        font-variation-settings: 'GRAD' 500, 'XTRA' 324, 'YTAS' 983, 'YTLC' 570;
+    }
+    100% {
+        font-variation-settings: 'GRAD' -300, 'XTRA' 640, 'YTAS' 500, 'YTLC' 420;
+    }
 }
