@@ -185,12 +185,12 @@
         <p class="example">Hello world!</p>
         <div class="example-togglers">
             <label for="" class="example-label">
-                <code>font-weight</code>
-                <input class="example-range" type="range" value="200" min="200" max="900" step="1" id="widthRange" oninput="widthVal(this.value)" onchange="widthVal(this.value)">
+                <code>font-weight: <output id="wght">200</output></code>
+                <input class="example-range" type="range" value="200" min="200" max="900" step="1" id="wghtRange" oninput="wghtVal(this.value)" onchange="wghtVal(this.value)">
             </label>
             <label for="" class="example-label">
-                <code>font-stretch</code>
-                <input class="example-range" type="range" value="50" min="50" max="200" step="1" id="optRange" oninput="optVal(this.value)" onchange="optVal(this.value)">
+                <code>font-stretch <output id="wdth">50%</output></code>
+                <input class="example-range" type="range" value="50" min="50" max="200" step="1" id="wdthRange" oninput="wdthVal(this.value)" onchange="wdthVal(this.value)">
             </label>
         </div>
         <style>
@@ -239,16 +239,19 @@
 
         <script>
             let ex = document.querySelector(".example");
-            let widthRange = document.querySelector("#widthRange");
-            let optRange = document.querySelector("#optRange");
+            let wghtOut = document.querySelector("#wght");
+            let wdthOut = document.querySelector("#wdth");
+            let wghtRange = document.querySelector("#wghtRange");
+            let wdthRange = document.querySelector("#wdthRange");
 
-            function widthVal() {
-                ex.style.setProperty("--weight", widthRange.value)
+            function wghtVal() {
+                ex.style.setProperty("--weight", wghtRange.value);
+                wghtOut.innerHTML = wghtRange.value;
             }
 
-            function optVal() {
-                console.log(optRange.value)
-                ex.style.setProperty("--stretch", optRange.value + "%")
+            function wdthVal() {
+                ex.style.setProperty("--stretch", wdthRange.value + "%");
+                wdthOut.innerHTML = wdthRange.value + "%";
             }
         </script>
     </section>
