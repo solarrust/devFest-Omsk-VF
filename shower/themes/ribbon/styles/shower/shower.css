@@ -30,8 +30,11 @@
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
 
+    --text-color: #f1f1f1;
+    --bkg-color: #202124;
+
     margin: 0;
-    color: #f1f1f1;
+    color: var(--text-color);
     counter-reset: slide;
     font: 25px/2 'Zenith', sans-serif;
 }
